@@ -123,6 +123,8 @@ const Agent = ({
                     username: userName,
                     userid: userId,
                 },
+                clientMessages: [],
+                serverMessages: []
             });
         } else {
             let formattedQuestions = "";
@@ -133,9 +135,42 @@ const Agent = ({
             }
 
             await vapi.start(interviewer, {
+                analysisPlan: undefined,
+                artifactPlan: undefined,
+                backgroundDenoisingEnabled: false,
+                backgroundSound: undefined,
+                clientMessages: [],
+                compliancePlan: undefined,
+                credentialIds: [],
+                credentials: [],
+                endCallMessage: "",
+                endCallPhrases: [],
+                firstMessage: "",
+                firstMessageInterruptionsEnabled: false,
+                firstMessageMode: undefined,
+                hooks: [],
+                keypadInputPlan: undefined,
+                maxDurationSeconds: 0,
+                messagePlan: undefined,
+                metadata: undefined,
+                model: undefined,
+                modelOutputInMessagesEnabled: false,
+                monitorPlan: undefined,
+                name: "",
+                observabilityPlan: undefined,
+                server: undefined,
+                serverMessages: [],
+                silenceTimeoutSeconds: 0,
+                startSpeakingPlan: undefined,
+                stopSpeakingPlan: undefined,
+                transcriber: undefined,
+                transportConfigurations: [],
+                voice: undefined,
+                voicemailDetection: undefined,
+                voicemailMessage: "",
                 variableValues: {
                     questions: formattedQuestions,
-                },
+                }
             });
         }
     };
