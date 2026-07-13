@@ -21,6 +21,7 @@
 /build
 
 # misc
+desktop.ini
 .DS_Store
 *.pem
 
